@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e6433877bc15cdb42b53754ff8fa3d52b9d867c0cef6ba27f017bd2b1562ae5f"
+            "sha256": "27f39bb49760cc8cc608d0b62b6a8a0a530daca43422984be44c741006a13c77"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -239,7 +239,7 @@
                 "sha256:9ec02aa7d674acb8618afb127e27fde7fc68994c0437ad759fa094a574adb265",
                 "sha256:ec0a6cb848cc212002b9828c3e34c675e0c9ff6741dc445cab6fdd4e1085d1f1"
             ],
-            "markers": "python_version < '3'",
+            "markers": "python_version == '2.6' or python_version == '2.7'",
             "version": "==3.2.0"
         },
         "gevent": {
@@ -311,7 +311,7 @@
         "indigo": {
             "editable": true,
             "git": "https://github.com/OpenUpSA/indigo.git",
-            "ref": "a7ed6bac81ef1111346ee0e465f79faa4bd97cc3"
+            "ref": "34612a60fd344af099c9341aab724296dd00eb49"
         },
         "jmespath": {
             "hashes": [
