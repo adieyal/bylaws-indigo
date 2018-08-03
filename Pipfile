@@ -8,7 +8,7 @@ gevent = "==1.2.2"
 greenlet = "==0.4.13"
 gunicorn = "==19.7.1"
 wsgiref = "==0.1.2"
-indigo = {ref = "00c83900a0ec304cb5b9f9389b55a190ed901283", git = "https://github.com/OpenUpSA/indigo.git"}
+indigo = {ref = "a7ed6bac81ef1111346ee0e465f79faa4bd97cc3", git = "https://github.com/OpenUpSA/indigo.git", editable = true}
 
 [dev-packages]
 
