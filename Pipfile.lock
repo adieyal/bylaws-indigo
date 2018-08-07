@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7945b9efc83aa9e8a6d4dea2288c110a8a214b90a02f8e8aaf273ef06be2a734"
+            "sha256": "67d9fbf67a2d5fc44eacfd6eb81eb6e205ce87af9bb7b63147c21960b1aace29"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -27,22 +27,22 @@
                 "sha256:9d98697f088eb1b0fa451391f91afb5e3ebde16bbdb272819fd091151fda4f1a",
                 "sha256:f0b0e4eba956de51238e17573b7087e852dfe9854afd2e9c873f73fc0ca0a6dd"
             ],
-            "markers": "python_version >= '2.6'",
+            "markers": "python_version == '2.7'",
             "version": "==1.5"
         },
         "boto3": {
             "hashes": [
-                "sha256:37853caa02f7141d7b1fb2537cc878bc58d2b1386224e3cf551af7f6ae3e4893",
-                "sha256:d0d849de20c938519df29e52d64210b408a67a20491e1e7d151588a60deef488"
+                "sha256:1fb25a1d8455b97276ef5f1e14255c04f59a985a14ddb69804ddf6c8a3449e08",
+                "sha256:71ee5169b6957298fb178b294452592cd7c734e5c0d1a67487b56f993085f254"
             ],
-            "version": "==1.7.70"
+            "version": "==1.7.71"
         },
         "botocore": {
             "hashes": [
-                "sha256:58b469e347865277e9713326709949f427f312eb9f64e5703de7128a6a90a5ad",
-                "sha256:7a3759d346bf297d33091a4c154d3c50f0c3dc7b428badb6c950f87ea390e5b1"
+                "sha256:9302ad235db66efa9d11c664b1cb0b259826d82a206446460ea05bcfcc431a4a",
+                "sha256:ffa673c9a53f3ab4eba4ce8cf9d736177ca67509827e716cb5070f0b621fb0a7"
             ],
-            "version": "==1.10.70"
+            "version": "==1.10.71"
         },
         "certifi": {
             "hashes": [
@@ -232,7 +232,7 @@
                 "sha256:9ec02aa7d674acb8618afb127e27fde7fc68994c0437ad759fa094a574adb265",
                 "sha256:ec0a6cb848cc212002b9828c3e34c675e0c9ff6741dc445cab6fdd4e1085d1f1"
             ],
-            "markers": "python_version < '3' and python_version >= '2.6'",
+            "markers": "python_version == '2.6' or python_version == '2.7'",
             "version": "==3.2.0"
         },
         "gevent": {
@@ -304,7 +304,7 @@
         "indigo": {
             "editable": true,
             "git": "https://github.com/OpenUpSA/indigo.git",
-            "ref": "2ab2675d12f03b190b6ef91fc9ea8fc226066080"
+            "ref": "b3f95b63ef46b2ee93a4a27bb93520390afea0dd"
         },
         "jmespath": {
             "hashes": [
