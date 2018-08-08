@@ -232,7 +232,7 @@
                 "sha256:9ec02aa7d674acb8618afb127e27fde7fc68994c0437ad759fa094a574adb265",
                 "sha256:ec0a6cb848cc212002b9828c3e34c675e0c9ff6741dc445cab6fdd4e1085d1f1"
             ],
-            "markers": "python_version < '3' and python_version >= '2.6'",
+            "markers": "python_version < '3'",
             "version": "==3.2.0"
         },
         "gevent": {
@@ -304,7 +304,7 @@
         "indigo": {
             "editable": true,
             "git": "https://github.com/OpenUpSA/indigo.git",
-            "ref": "b3f95b63ef46b2ee93a4a27bb93520390afea0dd"
+            "ref": "ded293c1b93837a541fad8a751feaf29b144cd2f"
         },
         "jmespath": {
             "hashes": [
