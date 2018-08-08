@@ -12,6 +12,9 @@ indigo = {editable = true, ref = "ded293c1b93837a541fad8a751feaf29b144cd2f", git
 django-allauth = ">=0.36.0"
 
 [dev-packages]
+django-extensions = "*"
+django-debug-toolbar = "*"
+werkzeug = "*"
 
 [requires]
 python_version = "2.7"

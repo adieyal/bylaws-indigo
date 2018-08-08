@@ -5,6 +5,7 @@ INSTALLED_APPS = (
     'indigo_bylaws',
     #'indigo_community',
 
+) + INSTALLED_APPS + (
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -14,13 +15,20 @@ INSTALLED_APPS = (
     'allauth.socialaccount.providers.twitter',
 
     'django.contrib.sites',
-) + INSTALLED_APPS
+
+    'django_extensions',
+)
+
+if DEBUG:
+    INSTALLED_APPS = INSTALLED_APPS + ('debug_toolbar',)
+    MIDDLEWARE = MIDDLEWARE + ('debug_toolbar.middleware.DebugToolbarMiddleware',)
 
 
 ROOT_URLCONF = 'indigo_bylaws.urls'
 
 
 SITE_ID = 1
+INTERNAL_IPS = ['127.0.0.1']
 
 
 AUTHENTICATION_BACKENDS = (
