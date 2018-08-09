@@ -15,6 +15,7 @@ django-allauth = ">=0.36.0"
 django-extensions = "*"
 django-debug-toolbar = "*"
 werkzeug = "*"
+indigo = {editable = true, path = "./../../africanlii/indigo", extras = ["test"]}
 
 [requires]
 python_version = "2.7"
