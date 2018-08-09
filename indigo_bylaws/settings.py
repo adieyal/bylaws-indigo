@@ -3,7 +3,7 @@ from indigo.settings import *
 
 INSTALLED_APPS = (
     'indigo_bylaws',
-    #'indigo_community',
+    'indigo_social',
 
 ) + INSTALLED_APPS + (
     'allauth',
