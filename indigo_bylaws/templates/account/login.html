@@ -12,13 +12,13 @@
     {% for provider in socialaccount_providers %}
     <li>
       <a class="btn btn-block btn-outline-primary mb-3 socialaccount_provider {{provider.id}}" href="{% provider_login_url provider.id process='login' %}">
-        <i class="fa fa-fw fa-{{ provider.id }}"></i> Log in with {{provider.name}}
+        <i class="fab fa-fw fa-{{ provider.id }}"></i> Log in with {{provider.name}}
       </a>
     </li>
     {% endfor %}
 
     <li>
-      <a class="btn btn-block btn-outline-primary" data-toggle="collapse" href="#email-login"><i class="fa fa-fw fa-at"></i> Log in with email</a>
+      <a class="btn btn-block btn-primary" data-toggle="collapse" href="#email-login"><i class="fa fa-fw fa-at"></i> Log in with email</a>
     </li>
   </ul>
 {% endif %}
@@ -66,7 +66,7 @@
     {% endif %}
   </div>
 
-  <button class="btn btn-primary btn-block mb-3" type="submit">Log in</button>
+  <button class="btn btn-success btn-block mb-3" type="submit">Log in</button>
 
   <div class="text-center">
     <a href="{{ signup_url }}">Sign up</a>
