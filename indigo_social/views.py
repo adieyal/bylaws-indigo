@@ -35,3 +35,9 @@ class EditAccountAPIView(AbstractAuthedIndigoView, DetailView):
 
     def get_object(self):
         return self.request.user
+
+    def post(self, request):
+        request.user.editor.api_token().delete()
+        # force a new one to be created
+        request.user.editor.api_token()
+        return self.get(request)
