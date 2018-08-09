@@ -4,14 +4,15 @@ from django.urls import reverse
 from django.views.generic import DetailView, FormView
 
 from indigo_social.forms import UserProfileForm, UserForm
+from indigo_app.views import AbstractAuthedIndigoView
 
 
-class UserProfileView(DetailView):
+class UserProfileView(AbstractAuthedIndigoView, DetailView):
     queryset = User.objects
     context_object_name = 'user'
 
 
-class EditAccountView(FormView):
+class EditAccountView(AbstractAuthedIndigoView, FormView):
     template_name = 'indigo_social/account/edit.html'
     form_class = UserForm
 
