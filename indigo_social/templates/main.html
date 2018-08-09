@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+
+{% block navbar-user %}
+<ul class="navbar-nav" id="user-buttons">
+  <li class="nav-item not-logged-in"><a href="login"><i class="fa fa-sign-in-alt"></i> Log in</a></li>
+
+  <li class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle logged-in" data-toggle="dropdown">
+      <i class="fa fa-user"></i>
+      <span class="username">
+        {% if user.is_authenticated %}{{ user.first_name|default:user.email }}{% endif %}
+      </span>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+      <a class="dropdown-item" href="{% url 'indigo_social:user_profile' request.user.id %}"><i class="fa fa-user fa-fw"></i> Profile</a>
+      <a class="dropdown-item" href="{% url 'indigo_social:edit_account' %}"><i class="fa fa-cog fa-fw"></i> Account</a>
+
+      {% if request.user.is_staff %}
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="/admin/" target="_blank"><i class="fas fa-cog fa-fw"></i> Site Settings</a>
+      {% endif %}
+
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="{% url 'account_logout' %}"><i class="fa fa-sign-out-alt fa-fw"></i> Log out</a>
+    </div>
+  </li>
+</ul>
+{% endblock %}
