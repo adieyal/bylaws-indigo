@@ -7,6 +7,7 @@ urlpatterns = [
     url('', include([
         # user edit pages
         url(r'^accounts/edit/$', views.EditAccountView.as_view(), name='edit_account'),
+        url(r'^accounts/edit/api/$', views.EditAccountAPIView.as_view(), name='edit_account_api'),
 
         # profile page
         url(r'^users/(?P<pk>\d+)/$', views.UserProfileView.as_view(), name='user_profile'),

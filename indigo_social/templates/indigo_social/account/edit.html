@@ -1,5 +1,6 @@
 {% extends "indigo_social/account/layout.html" %}
 
+{% block title%}Edit Profile {{ block.super }}{% endblock %}
 {% block account-sidebar %}
   {% include 'indigo_social/account/_sidebar.html' with active='profile' %}
 {% endblock %}
@@ -8,7 +9,7 @@
 <form method="POST">
   {% csrf_token %}
 
-  <div class="card">
+  <div class="card mb-5">
     <div class="card-body">
 
       <div class="form-group">
@@ -39,5 +40,6 @@
       <button type="submit" class="btn btn-success">Save</button>
     </div>
   </div>
+
 </form>
 {% endblock %}

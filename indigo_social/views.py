@@ -27,3 +27,11 @@ class EditAccountView(AbstractAuthedIndigoView, FormView):
     def form_valid(self, form):
         self.object = form.save()
         return super(EditAccountView, self).form_valid(form)
+
+
+class EditAccountAPIView(AbstractAuthedIndigoView, DetailView):
+    context_object_name = 'user'
+    template_name = 'indigo_social/account/api.html'
+
+    def get_object(self):
+        return self.request.user
