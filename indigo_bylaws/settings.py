@@ -10,7 +10,7 @@ INSTALLED_APPS = (
     'allauth.account',
     'allauth.socialaccount',
     #'allauth.socialaccount.providers.facebook',
-    #'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.google',
     #'allauth.socialaccount.providers.github',
     #'allauth.socialaccount.providers.twitter',
 
@@ -46,3 +46,14 @@ ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
 ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_USERNAME_MIN_LENGTH = 3
 LOGIN_URL = 'account_login'
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'offline',
+        }
+    }
+}
