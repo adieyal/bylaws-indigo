@@ -1,0 +1,53 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block title %}Log In{% endblock %}
+
+{% block content %}
+<h1>Log In</h1>
+
+{% get_providers as socialaccount_providers %}
+{% if socialaccount_providers %}
+  <p>Please log in with one of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+  for a {{ site_name }} account and log in below:</p>
+
+  <div class="socialaccount_ballot">
+
+    <ul class="socialaccount_providers">
+      {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+    </ul>
+
+    <div class="login-or">or</div>
+
+  </div>
+
+  {% include "socialaccount/snippets/login_extra.html" %}
+{% endif %}
+
+<form class="login" method="POST" action="{% url 'account_login' %}">
+  {% csrf_token %}
+  {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+  {% endif %}
+
+  <div class="form-group">
+    <label for="{{ form.login.id_for_label }}">Email address</label>
+    <input type="email" class="form-control" name="{{ form.login.name }}" id="{{ form.login.id_for_label }}" required autofocus placeholder="you@example.com">
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.password.id_for_label }}">Password</label>
+    <input type="password" class="form-control" name="{{ form.password.name }}" id="{{ form.password.id_for_label }}" required>
+    <div><a href="{% url 'account_reset_password' %}">Forgot your password?</a></div>
+  </div>
+
+  <button class="btn btn-primary btn-block mb-3" type="submit">Log in</button>
+
+  <div class="text-center">
+    <a href="{{ signup_url }}">Sign up</a>
+  </div>
+</form>
+
+{% endblock %}

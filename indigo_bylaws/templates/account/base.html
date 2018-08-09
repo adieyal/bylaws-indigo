@@ -1,0 +1,28 @@
+{% extends "standalone.html" %}
+{% load staticfiles sass_tags %}
+
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block head-css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% sass_src 'stylesheets/indigo_bylaws.scss' %}">
+{% endblock %}
+
+{% block standalone-content %}
+
+  <div class="card allauth-box">
+    <div class="card-header text-right">
+      <img src="{% static 'images/logo.png' %}" class="logo" title="Indigo">
+    </div>
+    <div class="card-body">
+      {% block content %}{% endblock %}
+    </div>
+    <div class="card-footer">
+      {% if SUPPORT_EMAIL %}
+      Need help? Please <a href="mailto:{{ SUPPORT_EMAIL }}">email us</a>.
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock %}
