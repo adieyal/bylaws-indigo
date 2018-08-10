@@ -50,6 +50,7 @@ ACCOUNT_FORMS = {
     'signup': 'indigo_social.forms.UserSignupForm'
 }
 LOGIN_URL = 'account_login'
+LOGIN_REDIRECT_URL = '/accounts/profile/'
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': [
