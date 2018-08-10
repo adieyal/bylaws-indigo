@@ -4,6 +4,7 @@ from indigo.settings import *
 INSTALLED_APPS = (
     'indigo_bylaws',
     'indigo_social',
+    'captcha',
 
 ) + INSTALLED_APPS + (
     'allauth',
@@ -45,6 +46,9 @@ ACCOUNT_EMAIL_SUBJECT_PREFIX = EMAIL_SUBJECT_PREFIX
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
 ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_USERNAME_MIN_LENGTH = 3
+ACCOUNT_FORMS = {
+    'signup': 'indigo_social.forms.UserSignupForm'
+}
 LOGIN_URL = 'account_login'
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
@@ -57,3 +61,8 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+
+# Google recaptcha
+RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY', '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI')
+RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY', '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe')
+NOCAPTCHA = True

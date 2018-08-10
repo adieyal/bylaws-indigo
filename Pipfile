@@ -10,6 +10,7 @@ gunicorn = "==19.7.1"
 wsgiref = "==0.1.2"
 #indigo = {editable = true, ref = "ded293c1b93837a541fad8a751feaf29b144cd2f", git = "https://github.com/OpenUpSA/indigo.git"}
 django-allauth = ">=0.36.0"
+django-recaptcha = ">=1.4.0"
 
 [dev-packages]
 django-extensions = "*"
