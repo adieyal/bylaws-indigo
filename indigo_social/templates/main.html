@@ -1,5 +1,12 @@
 {% extends 'main.html' %}
 
+{% block navbar-help-menu %}
+  {{ block.super }}
+  <div class="dropdown-divider"></div>
+  <a class="dropdown-item" href="{% url 'terms_of_use' %}" target="_blank">Terms of Use &amp; Privacy Policy</a>
+{% endblock %}
+
+
 {% block navbar-user %}
 <ul class="navbar-nav" id="user-buttons">
   {% if request.user.is_authenticated %}
