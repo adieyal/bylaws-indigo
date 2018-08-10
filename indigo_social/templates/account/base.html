@@ -1,13 +1,7 @@
 {% extends "standalone.html" %}
 {% load staticfiles sass_tags %}
 
-
 {% block title %}{{ title }}{% endblock %}
-
-{% block head-css %}
-  {{ block.super }}
-  <link rel="stylesheet" href="{% sass_src 'stylesheets/indigo_bylaws.scss' %}">
-{% endblock %}
 
 {% block standalone-content %}
 

@@ -1,9 +1,11 @@
 from django.conf.urls import include, url
+from django.views.generic import TemplateView
 
 import indigo_social.views as views
 
 urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
+    url(r'^terms', TemplateView.as_view(template_name='indigo_social/terms.html'), name='terms_of_use'),
     url('', include([
         # user edit pages
         url(r'^accounts/edit/$', views.EditAccountView.as_view(), name='edit_account'),
