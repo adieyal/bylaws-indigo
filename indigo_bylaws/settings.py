@@ -16,12 +16,11 @@ INSTALLED_APPS = (
     #'allauth.socialaccount.providers.twitter',
 
     'django.contrib.sites',
-
-    'django_extensions',
 )
 
 if DEBUG:
     INSTALLED_APPS = INSTALLED_APPS + ('debug_toolbar',)
+    INSTALLED_APPS = INSTALLED_APPS + ('django_extensions',)
     MIDDLEWARE = MIDDLEWARE + ('debug_toolbar.middleware.DebugToolbarMiddleware',)
 
 
