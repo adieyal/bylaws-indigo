@@ -5,7 +5,6 @@ from indigo.urls import urlpatterns
 
 
 urlpatterns = urlpatterns + [
-    url('', include('indigo_social.urls')),
 ]
 
 if settings.DEBUG:
