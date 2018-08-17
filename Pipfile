@@ -14,6 +14,7 @@ indigo = {editable = true, ref = "f2acc5f7b200fe24be21ee44f693227ae7d6c98e", git
 django-extensions = "*"
 django-debug-toolbar = "*"
 werkzeug = "*"
+indigo-workflow = {editable = true, path = "./../indigo-workflow"}
 #indigo = {editable = true, path = "./../../africanlii/indigo", extras = ["test"]}
 
 [requires]

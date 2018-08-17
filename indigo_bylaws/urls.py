@@ -5,6 +5,7 @@ from indigo.urls import urlpatterns
 
 
 urlpatterns = urlpatterns + [
+    url(r'^workflow/', include('indigo_workflow.urls', namespace='workflow')),
 ]
 
 if settings.DEBUG:
