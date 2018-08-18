@@ -4,9 +4,9 @@ from django.conf.urls import include, url
 from indigo.urls import urlpatterns
 
 
-urlpatterns = urlpatterns + [
-    url(r'^workflow/', include('indigo_workflow.urls', namespace='workflow')),
-]
+urlpatterns = [
+    url(r'', include('indigo_workflow.urls', namespace='workflow')),
+] + urlpatterns
 
 if settings.DEBUG:
     import debug_toolbar
