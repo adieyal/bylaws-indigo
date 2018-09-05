@@ -8,7 +8,7 @@ gevent = "==1.2.2"
 greenlet = "==0.4.13"
 gunicorn = "==19.7.1"
 wsgiref = "==0.1.2"
-indigo = {editable = true, ref = "f2acc5f7b200fe24be21ee44f693227ae7d6c98e", git = "https://github.com/OpenUpSA/indigo.git"}
+indigo = {editable = true, ref = "51cf15f47fb649032a4c40c3af7039aed159ae55", git = "https://github.com/OpenUpSA/indigo.git"}
 
 [dev-packages]
 django-extensions = "*"
