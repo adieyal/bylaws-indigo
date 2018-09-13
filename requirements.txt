@@ -4,4 +4,4 @@ gunicorn==19.7.1
 wsgiref==0.1.2
 elastic-apm==3.0.1
 python-logstash==0.4.6
--e git+https://github.com/OpenUpSA/indigo.git@d44150fcd4f73b2f8a8cd65ad8872bb96d67b704#egg=indigo
+-e git+https://github.com/OpenUpSA/indigo.git@9670caf6a361853e92e8a513dfeec001a25305b3#egg=indigo
