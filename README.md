@@ -9,4 +9,4 @@ Indigo-bylaws depends on some private GitHub repos. You need to install some dok
 
 1. Install [dokku-hostkeys-plugin](https://github.com/cedricziel/dokku-hostkeys-plugin) and run `dokku hostkeys:shared:autoadd github.com` so that dokku trusts `github.com` as a server.
 2. Install [dokku-deployment-keys](https://github.com/cedricziel/dokku-deployment-keys) and run `dokku deploymentkeys:shared` to get the public portion of the deployment key that dokku will use when cloning private GitHub repos.
-3. In the [indigo-bylaws GitHub repo settings](https://github.com/OpenUpSA/bylaws-indigo/settings/keys), create a deployment key and copy in the public key from step 2.
+3. In the [indigo-workflow GitHub repo settings](https://github.com/longhotsummer/bylaws-workflow/settings/keys), create a deployment key and copy in the public key from step 2.
