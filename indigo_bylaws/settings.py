@@ -5,6 +5,10 @@ from indigo.settings import *
 
 INSTALLED_APPS = (
     'indigo_bylaws',
+
+    'indigo_workflow',
+    'viewflow',
+
 ) + INSTALLED_APPS + (
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
