@@ -4,5 +4,5 @@ gunicorn==19.7.1
 wsgiref==0.1.2
 elastic-apm==3.0.1
 python-logstash==0.4.6
--e git+https://github.com/OpenUpSA/indigo.git@b759155d79a3e5efbe40246f25a79be0f046bc03#egg=indigo
+-e git+https://github.com/OpenUpSA/indigo.git@1d89567ba00c8f5382e33ff495928eb4b10fb740#egg=indigo
 -e git+git@github.com:longhotsummer/indigo-workflow.git@master#egg=indigo-workflow
